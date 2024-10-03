@@ -23,7 +23,7 @@ const clearInput=()=>{
   return (
     <div className='todo-create' >
 
-        <input value={newToDo} onChange={(e)=>{setNewToDo(e.target.value )}} className='todo-input' type='text ' placeholder='Add new to do'></input>
+        <input value={newToDo} onChange={(e)=>{setNewToDo(e.target.value)}} className='todo-input' type='text ' placeholder='Add new to do'></input>
         <button onClick={createToDo} className='todo-button'> To Do Oluştur</button>
     </div>
   )

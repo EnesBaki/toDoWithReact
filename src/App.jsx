@@ -17,12 +17,23 @@ function App() {
     
   }
 
+  const updateToDo=(newToDo)=>{
+    const updatedArray=todos.map((todo)=>{
+    if(todo.id!==newToDo.id){
+      return todo;
+    }
+    return newToDo;})
+
+    setTodos([...updatedArray])
+  }
+  
+
   return (
    <div className='App'>
     <Header />
     <div className='main' >
       <ToDoCreate onCreateToDo={createToDo} />
-      <ToDoList todos={todos} del={deleteToDo}/>
+      <ToDoList todos={todos} del={deleteToDo} update={updateToDo}/>
       </div>
     
     
